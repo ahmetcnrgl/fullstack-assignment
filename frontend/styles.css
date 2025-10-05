@@ -1,0 +1,101 @@
+/* Fontlar */
+@font-face{
+  font-family: 'Avenir';
+  src: url('./assets/fonts/avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face{
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+:root { --yg:#E6CA97; --wg:#D9D9D9; --rg:#E1A4A9; --muted:#9b9b9b; }
+
+*{ box-sizing:border-box }
+body{
+  margin:0;
+  font-family:'Montserrat',system-ui,sans-serif;
+  font-size:15px;
+  background:#ffffff; /*sayfa beyaz*/
+ }
+.container{ max-width:1200px; margin:0 auto; padding:32px 20px }
+.title{
+  font-family:'Avenir',sans-serif; font-weight:400;
+  font-size:45px; color:#111; text-align:center; margin:8px 0 28px
+}
+
+/*ANA CAROUSEL*/
+.products-swiper{ padding:0 44px; }
+.products-swiper .swiper-wrapper{ align-items:flex-start; }
+.products-swiper .swiper-slide{ height:auto; padding:0 8px; background:transparent; box-shadow:none; }
+
+.products-swiper .swiper-button-prev,
+.products-swiper .swiper-button-next{
+  color:#000; background:transparent; border-radius:0;
+  width:auto; height:auto; box-shadow:none; padding:0;
+}
+.products-swiper .swiper-button-prev::after,
+.products-swiper .swiper-button-next::after{ font-size:18px; font-weight:700; }
+
+/* --- TILE --- */
+.tile{ display:flex; flex-direction:column; gap:12px; width:100%; background:transparent; box-shadow:none }
+
+
+.thumb {
+  position: relative;
+  width: 88%;
+  aspect-ratio: 1 / 1; /* kare katman */
+  border-radius: 0; /* kare katman */
+  overflow: hidden; 
+  background: #f3f3f3; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px; /* daha da küçük boşluk, yüzükler büyüsün */
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12); /* ring 3 benzeri gölge, tümüne */
+}
+
+/* yüzük görseli */
+.thumb img {
+  width: 100%; 
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: transparent !important; 
+  border-radius: 0; 
+  mix-blend-mode: normal; 
+  filter: none; 
+  transition: transform 0.3s ease;
+}
+
+.thumb:hover img {
+  transform: scale(1.05); 
+}
+
+
+/* Tipografi */
+.name{ font-family:'Avenir'; font-size:14px; color:#222; margin-top:8px }
+.price{ font-size:18px; color:#111 }
+.small{ font-size:12px; color:#666 }
+
+/* Satırlar */
+.row{ display:flex; align-items:center; gap:12px; justify-content:space-between }
+
+/* Renk swatch’ları */
+.swatch{
+  width:20px; height:20px; border-radius:999px;
+  border:0; box-shadow:none; cursor:pointer; /* seçili olmayanlar: dış çember yok */
+}
+.swatch[data-color="yellow"]{ background:var(--yg) }
+.swatch[data-color="white"]{ background:var(--wg) }
+.swatch[data-color="rose"]{ background:var(--rg) }
+.swatch.active{ border:1px solid #222; box-shadow:none }
+.swatches{ display:flex; gap:10px }
+
+/* Yıldızlar */
+.stars{ font-size:14px; line-height:1; letter-spacing:2px; font-family:'Avenir',sans-serif }
+.precise-wrap{ position:relative; display:inline-block }
+.stars-base{ color:#d7d7d7 }
+.stars-fill{ color:#E6A500; position:absolute; left:0; top:0; white-space:nowrap; overflow:hidden }
+.rating{ font-size:12px; color:#555 }

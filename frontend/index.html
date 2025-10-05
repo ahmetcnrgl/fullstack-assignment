@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles.css?v=4" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Product List</h1>
+
+    <!-- ANA CAROUSEL -->
+    <div class="swiper products-swiper">
+      <div class="swiper-wrapper" id="product-slides"></div>
+      <div class="swiper-button-prev main-prev"></div>
+      <div class="swiper-button-next main-next"></div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>window.API_URL = "http://127.0.0.1:8080";</script>
+  <script src="./app.js"></script>
+</body>
+</html>
